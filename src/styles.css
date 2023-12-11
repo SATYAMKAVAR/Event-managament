@@ -1,5 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-    background-color: #333533;
-    color: white;
+body {
+  background-color: #333533;
+  color: white;
+}
+.font-white {
+  color: #f8f9fa;
+} /* You can add global styles to this file, and also import other style files */
+.bg-black {
+  background-color: #242423;
+}
+
+.bg-light-black {
+  background-color: #f6f8f6;
+}
+
+.font-light-black {
+  color: #333533;
+}
+
+.font-white {
+  color: #e8eddf;
+}
+
+body {
+  background-color: #333533;
+  color: #e8eddf;
+}
+
+.sidebar {
+  background-color: #242423;
+  width: 8vh;
+  height: 100%;
+  color: #a1a1a1;
+  position: fixed;
+}
+
+.profile {
+  height: 5vh;
+  width: 5vh;
+  background-color: #a1a1a1;
+  border-radius: 30px;
+}
+
+.profile-footer {
+  height: 5vh;
+  width: 100%;
+}
+
+.card-body {
+  border-bottom: 2px solid #333533;
+}
+
+.discussions {
+  height: 7vh;
+  width: 90vh;
+}
+
+.Home-header {
+  margin-left: 65px;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.skill {
+  height: 3vh;
+  width: auto;
+  background-color: #333533;
+  border-radius: 10px;
+}
+
+.btn-local {
+  width: 100%;
+  border-radius: 50px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.clubNeme {
+  height: 4vh;
+  width: auto;
+  opacity: 50;
+  border-radius: 20px;
+  background-color: rgba(255, 231, 13, 0.42);
 }

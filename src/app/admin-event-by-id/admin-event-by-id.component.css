@@ -1,0 +1,23 @@
+.bg{
+    background-color: #db3a34;
+}
+.event-img{
+    object-fit: contain;
+    overflow: hidden;
+}
+.card-content-div{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px 0 20px;
+    margin-top: 20px;
+}
+.content-div{
+    width: 50%;
+}
+.content-info{
+    width: 30%;
+}
+.button{
+    width: 100%;
+    margin-top: 20px;
+}

@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="card mb-3 bg-black font-white">
+
+        <div class="card-body">
+
+            <img src={{event.imageURL}} class="card-img-top event-img" alt="...">
+
+            <div class="card-content-div">
+                
+                <div class="content-div">
+                    <h2 class="card-title fs-2">{{event.title}}</h2>
+                    <p class="card-text fs-5">{{ event.description}}</p>
+                </div>
+                <div class="fs-4 content-info" >
+                    Date : {{event.date}} <br />
+                    Participants per Team : {{event.maxMembers}} <br />
+                    
+                    <button class="btn bg button text-light" (click)="DeleteEvent()">
+                        Delete Event
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+
+    <!-- <table class="table font-white" border="2">
+        
+        <tbody>
+            <tr *ngFor="let team of event.teams">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>Username</td>
+                            <td>Mobile</td>
+                            <td>Email</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let member of team;let i=index">
+                            <td>{{team[i].username}}</td>
+                            <td>{{team[i].mobile}}</td>
+                            <td>{{team[i].email}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </tr>
+        </tbody>
+    </table>
+ -->
+
+</div>

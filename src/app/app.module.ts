@@ -9,7 +9,15 @@ import { RouterModule } from '@angular/router';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { RulesComponent } from './rules/rules.component';
-import { LucideAngularModule, Mail , Contact , MapPinned} from 'lucide-angular';
+import { LucideAngularModule, Mail , Contact , MapPinned ,Plus} from 'lucide-angular';
+import { ClientEventsComponent } from './client-events/client-events.component';
+import { ClientEventDetailsComponent } from './client-event-details/client-event-details.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AdminEventByIdComponent } from './admin-event-by-id/admin-event-by-id.component';
+import { AddEventComponent } from './add-event/add-event.component';
+import { AdminComponent } from './admin/admin.component';
+import { EditEventComponent } from './edit-event/edit-event.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +26,21 @@ import { LucideAngularModule, Mail , Contact , MapPinned} from 'lucide-angular';
     SignUpComponent,
     SignInComponent,
     ContactUsComponent,
-    RulesComponent
+    RulesComponent,
+    ClientEventsComponent,
+    ClientEventDetailsComponent,
+    AddEventComponent,
+    AdminComponent,
+    AdminEventByIdComponent,
+    EditEventComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    LucideAngularModule.pick({ Mail,Contact,MapPinned })
+    LucideAngularModule.pick({ Mail,Contact,MapPinned ,Plus}),
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
