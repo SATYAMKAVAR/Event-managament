@@ -37,11 +37,18 @@
         formControlName="number"
       />
     </div>
-    <button class="row m-4 float-end btn btn-primary">Sign Up</button>
-    <div class="float-start mt-4" >
-      <span>Have an account?</span>
-      <span routerLink="/sign-in" class="ms-2 cursor text-primary">Sign in</span>
-      <!-- <button class="row  btn btn-info"> Sign in </button> -->
+    <div class="row mt-4">
+      <div class="col-8">
+        <span>Have an account?</span>
+        <span routerLink="/sign-in"  class="ms-2 cursor text-primary"
+        >Sign in</span>
+      </div>
+          <button class="col-3 btn btn-primary" type="submit">
+            Sign Up
+          </button>
+        </div>
+        <div class="text-danger text-center mt-4 fs-3">
+          <span>{{ errMsg }}</span>
     </div>
   </form>
 </div>

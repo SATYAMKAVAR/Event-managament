@@ -7,7 +7,6 @@ import { Injectable } from '@angular/core';
 export class ApiSignInService {
 
   constructor(private _http: HttpClient) { }
-
   apiUrl = 'https://event-management-api-qd2e.onrender.com';
 
   post(data:any) {

@@ -18,17 +18,24 @@ export class SignInComponent {
     password: new FormControl(''),
   });
 
-  login(){
+  signin(){
     this._api.post(this.loginForm.value).subscribe((res:any)=>{
-      // this.loginForm = res;
-      console.log(res);
+      this.loginForm = res;
+      
+      localStorage.setItem('user', JSON.stringify(this.loginForm.value));
+      // localStorage.setItem('signInStatus', JSON.stringify('true'));
       if(res.isAdmin == true){
         this._router.navigate(['/admin']);      
       }
       if(res.isAdmin == false){
         this._router.navigate(['/']);      
       }
-    });
+    },
+    err => {
+      this.errMsg = err.error.message
+    }
+    );
+  }
   }
   // login() {
   //   if (
@@ -45,4 +52,4 @@ export class SignInComponent {
       
   //   }
   // }
-}
+

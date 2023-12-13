@@ -7,26 +7,31 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  styleUrl: './sign-up.component.css'
+  styleUrl: './sign-up.component.css',
 })
 export class SignUpComponent {
-  
-  constructor(private _api: ApiSignUpService,private _router: Router) {}
+  constructor(private _api: ApiSignUpService, private _router: Router) {}
+  errMsg = '';
 
-
-  loginForm:FormGroup = new FormGroup({
+  loginForm: FormGroup = new FormGroup({
     username: new FormControl(''),
     password: new FormControl(''),
-    email : new FormControl(''),
-    mobile : new FormControl(0)
+    email: new FormControl(''),
+    mobile: new FormControl(0),
   });
 
-  signup(){
-    this._api.post(this.loginForm.value).subscribe((res:any)=>{
-      // this.loginForm = res;
-      console.log(this.loginForm);
-      this._router.navigate(['/']);
-      console.log(res);
-    });
+  signup() {
+    this._api.post(this.loginForm.value).subscribe(
+      (res: any) => {
+        // this.loginForm = res;
+        console.log(this.loginForm);
+        this._router.navigate(['/']);
+        console.log(res);
+      },
+      (err) => {
+        this.errMsg = err.error.message;
+        console.log(err.error.message);
+      }
+    );
   }
 }

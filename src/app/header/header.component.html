@@ -31,9 +31,9 @@
         </li>
       </ul>
       <div class="d-flex">
-        <button *ngIf="!isAdmin" class="btn btn-primary" routerLink="/sign-in">Sign Out</button>
+        <button *ngIf="isSignIn" class="btn btn-primary" routerLink="/sign-in">Sign in</button>
         <!-- <img src="../../assets/profile.jpeg" class="me-5" width="30px"> -->
-          <button *ngIf="isAdmin" class="btn ms-5 btn-primary sign-out" (click)="logout()">
+          <button *ngIf="isSignIn" class="btn ms-5 btn-primary sign-out" (click)="logout()">
             Sign out
           </button>
       </div>
