@@ -1,40 +1,40 @@
 <div class="bg-black ">
   <div class="row mt-3 p-5">
     <div class="float-start col-6">
-      <img src="https://www.frolic.aswdc.in/img/FrolicTitle2023.png"
+      <img [src]="event1.imageURL"
         class="img-fluid" style="height: 60vh;">
     </div>
     <div class="float-start col-6 fs-4">
       <h1>
-        Crystal Waterfall Event
+        {{event1.title}}
       </h1>
       <p class="p-3">
-
+        {{event1.description.substring(0,250)+"..."}}
       </p>
     </div>
     <div class="float-start col-6 fs-4 mt-5">
       <h1>
-        Title
+        {{event2.title}}
       </h1>
       <p class="p-3">
-        Description
+        {{event2.description.substring(0,250)+"..."}}
       </p>
     </div>
     <div class="float-start col-6 mt-5">
-      <img src="https://th.bing.com/th/id/R.d7e789c3b8bcb2b7880dd3b4b1d3edd6?rik=ytog4A4XipK5yA&riu=http%3a%2f%2ftechnobrains.io%2fwp-content%2fuploads%2f2021%2f07%2fflutter-Featured-Blog-Image2.jpg&ehk=qNtlUWmyUkVCjiGvmi7dbdWp32XXAQM3qbdnfOtyuBw%3d&risl=&pid=ImgRaw&r=0"
+      <img [src]="event2.imageURL"
         class="img-fluid" style="height: 60vh;">
     </div>
 
     <div class="float-start col-6 mt-5">
-      <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c117f676-862a-495d-b51d-eefe1a368326/d3djjmg-c44e865b-c0be-49a9-8a88-5f79e5c515ea.jpg/v1/fill/w_900,h_636,q_75,strp/college_event_poster_3_by_r3nder3d_d3djjmg-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjM2IiwicGF0aCI6IlwvZlwvYzExN2Y2NzYtODYyYS00OTVkLWI1MWQtZWVmZTFhMzY4MzI2XC9kM2Rqam1nLWM0NGU4NjViLWMwYmUtNDlhOS04YTg4LTVmNzllNWM1MTVlYS5qcGciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.b48gDrwnaxV3523W94lk_IsW2d1aiAbmJCh3J4LqZ9A"
+      <img [src]="event3.imageURL"
         class="img-fluid" style="height: 60vh;">
     </div>
     <div class="float-start col-6 fs-4 mt-5">
       <h1>
-        Title
+        {{event3.title}}
       </h1>
       <p class="p-3">
-        Description
+        {{event3.description.substring(0,250)+"..."}}
       </p>
     </div>
   </div>
