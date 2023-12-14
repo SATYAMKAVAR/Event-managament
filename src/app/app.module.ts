@@ -19,6 +19,7 @@ import { AddEventComponent } from './add-event/add-event.component';
 import { AdminComponent } from './admin/admin.component';
 import { EditEventComponent } from './edit-event/edit-event.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,7 @@ import { EditEventComponent } from './edit-event/edit-event.component';
     RouterModule,
     LucideAngularModule.pick({ Mail,Contact,MapPinned ,Plus}),
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

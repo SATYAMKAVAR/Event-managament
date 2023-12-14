@@ -21,7 +21,8 @@ export class ClientEventDetailsComponent {
     maxMembers: 0,
     imageURL: '',
   };
-  id: number = 0;
+  id = '';
+  
   ngOnInit() {
     this.id = this._activatedRoute.snapshot.params['id'];
 

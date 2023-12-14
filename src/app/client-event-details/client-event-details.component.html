@@ -1,16 +1,17 @@
-<div class="container">
+<div class="container mt-4">
     <div class="card mb-3 bg-black font-white">
-        <img src={{event.imageURL}} class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">{{event.title}}</h5>
-            <p class="card-text">{{ event.description}}</p>
-            Date : {{event.date}} <br />
-            Max-Team Size : {{event.maxMembers}}
-            <br />
-            <br />
-            <button class="btn btn-primary">
-                Register Now
-            </button>
+            <img src={{event.imageURL}} class="card-img-top event-img" alt="...">
+            <div class="card-content-div">
+                <div class="content-div">
+                    <h2 class="card-title fs-2">{{event.title}}</h2>
+                    <p class="card-text fs-5">{{ event.description}}</p>
+                </div>
+                <div class="fs-4 content-info" >
+                    Date : {{event.date}} <br />
+                    Participants per Team : {{event.maxMembers}} <br />
+                </div>
+            </div>
         </div>
     </div>
 </div>

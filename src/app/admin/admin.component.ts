@@ -34,11 +34,27 @@ export class AdminComponent {
     this._router.navigate(["/add-event"])
   }
 
-  adminEventById(id: any) {
+  adminEventById(id: String) {
     this._router.navigate(["/admin/", id])
   }
 
   setForEdit(id: String) {
     this._router.navigate(["/admin/edit/", id])
+  }
+
+  openModel(){
+    const modelDiv = document.getElementById('exampleModalCenter');
+    
+    if(modelDiv != null){
+      modelDiv.style.display = 'block';
+    }
+  }
+
+  closeModel(){
+    const modelDiv = document.getElementById('exampleModalCenter');
+    console.log("closemodel")
+    if(modelDiv != null){
+      modelDiv.style.display = 'none';
+    }
   }
 }

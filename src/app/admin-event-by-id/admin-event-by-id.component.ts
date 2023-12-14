@@ -21,24 +21,31 @@ export class AdminEventByIdComponent {
     private _api: ApiEventService,
     private _router: Router,
     private _activatedRoute: ActivatedRoute
-  ) {}
+  ) { }
 
-  id = '';
-  event:event = new event();
+  id = 0;
+  event = {
+    id: '',
+    title: '',
+    description: '',
+    date: '',
+    typeOfEvent: '',
+    maxMembers: 0,
+    imageURL: '',
+  };
 
   ngOnInit() {
     this.id = this._activatedRoute.snapshot.params['id'];
     console.log(this.id)
     this._api.getById(this.id).subscribe((res: any) => {
       this.event = res;
-      console.log(res)
-      console.log(event)
     });
   }
 
   DeleteEvent() {
     this.id = this._activatedRoute.snapshot.params['id'];
     this._api.delete(this.id).subscribe((res: any) => {
+      console.log(res);
       if (res.success) {
         this._router.navigate(['/admin']);
       } else {
