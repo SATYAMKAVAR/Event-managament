@@ -1,17 +1,23 @@
-.card{
-    width: 25rem;
-    min-height: auto;
-    transition: all 0.4s;
-
-  }
-  .card:hover {
-    transform: scale(1.05);
-    /* border: rgb(143, 136, 136, .9) !important;    */
-    opacity: 100% !important;
+.card {
+  width: 25rem;
+  min-height: auto;
+  transition: all 0.4s;
 }
-  .add{
-    border: 2px solid #d6d6d6;
-    align-items: center;
-    background-color: transparent;
-    vertical-align: middle;
-  }
+.card:hover {
+  transform: scale(1.05);
+  /* border: rgb(143, 136, 136, .9) !important;    */
+  opacity: 100% !important;
+}
+.add {
+  border: 2px solid #d6d6d6;
+  align-items: center;
+  background-color: transparent;
+  vertical-align: middle;
+}
+
+.modal-content {
+  background-color: rgb(74, 70, 70) !important;
+}
+.modal-footer {
+  border: none !important;
+}
