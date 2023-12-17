@@ -13,11 +13,13 @@ export class ApiEventService {
   }
 
   getById(id:any){
-    return this._http.get(this.apiUrl+"/events"+id);
+    return this._http.get(this.apiUrl+"/events/"+id);
   }
 
   delete(id:any){
-    return this._http.delete(this.apiUrl+"/"+id);
+    return this._http.delete(this.apiUrl+"/events",{
+      "body":{id:id}
+    });
   }
 
   save(data:any){

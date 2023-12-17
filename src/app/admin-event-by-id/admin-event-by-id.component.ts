@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ApiEventService } from '../api-event.service';
 import { ActivatedRoute, Route, Router } from '@angular/router';
+import { ApiClientEventsService } from '../api-client-events.service';
 
 class event {
   _id: string = '';
