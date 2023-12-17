@@ -24,7 +24,7 @@ export class ApiEventService {
     return this._http.post(this.apiUrl + "/events",data);
   }
 
-  edit(data:any,id:number){
+  edit(data:any,id:any){
     return this._http.put(this.apiUrl+"/"+id,data);
   }
 }

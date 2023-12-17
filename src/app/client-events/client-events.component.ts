@@ -1,8 +1,17 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiClientEventsService } from '../api-client-events.service';
+import { FormControl, FormGroup } from '@angular/forms';
 
-
+class event{
+  _id:string="";
+  title:String="";
+  description:String="";
+  date:String="";
+  typeOfEvent:String="";
+  maxMembers:Number=0;
+  imageURL:String="";
+}
 @Component({
   selector: 'app-client-events',
   templateUrl: './client-events.component.html',
@@ -11,7 +20,7 @@ import { ApiClientEventsService } from '../api-client-events.service';
 export class ClientEventsComponent {
   
   events = [{_id:"",title:"",description:"",date:"",typeOfEvent:"",maxMembers:0,imageURL:""}]
-  constructor(private _api:ApiClientEventsService, private _router:Router){}
+  constructor(private _api:ApiClientEventsService, private _router:Router, private _activatedRoute:ActivatedRoute){}
 
   event1 = { 
     title : "Frolic 2023",
@@ -43,5 +52,21 @@ export class ClientEventsComponent {
     console.log(id)
   }
 
+  registerForm:FormGroup=new FormGroup({
+    
+  });
+  id:number=0;
+  event=new event();
 
+  setForRegister(id : any){
+    this.id = id
+    this._api.getById(id).subscribe((res:any)=>{
+      this.event = res;
+      console.log(this.event)
+    });
+  }
+
+  register(){
+    
+  }
 }

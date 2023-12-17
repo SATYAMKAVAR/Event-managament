@@ -1,6 +1,6 @@
 .card{
     width: 25rem;
-    height: auto;
+    min-height: auto;
     transition: all 0.4s;
 
   }

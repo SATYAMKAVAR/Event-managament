@@ -19,6 +19,7 @@ class event{
 })
 export class EditEventComponent {
   constructor(private _api:ApiClientEventsService, private _router:Router, private _activatedRoute:ActivatedRoute){}
+  
   eventForm:FormGroup=new FormGroup({
     title : new FormControl(''),
     typeOfEvent : new FormControl(''),

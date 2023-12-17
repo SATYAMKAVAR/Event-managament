@@ -23,7 +23,7 @@ export class AdminEventByIdComponent {
     private _activatedRoute: ActivatedRoute
   ) { }
 
-  id = 0;
+  
   event = {
     id: '',
     title: '',
@@ -33,10 +33,10 @@ export class AdminEventByIdComponent {
     maxMembers: 0,
     imageURL: '',
   };
+  id = '';
 
   ngOnInit() {
     this.id = this._activatedRoute.snapshot.params['id'];
-    console.log(this.id)
     this._api.getById(this.id).subscribe((res: any) => {
       this.event = res;
     });

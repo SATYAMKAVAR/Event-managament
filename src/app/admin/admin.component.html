@@ -3,25 +3,24 @@
         <div *ngFor="let e of events" style="height: auto;"
             class="card pt-2 pb-2 bg-black font-white col-md-4 m-3 mb-sm-0">
             <div class="mt-2" (click)="adminEventById(e._id)">
-                <img src={{e.imageURL}} class="card-img-top" alt="..." />
+                <div style="height: 30vh;">
+                    <img src={{e.imageURL}} class="card-img-top img-fluid" alt="..." />
+                </div>
                 <div class='row clubNeme float-start bg-light-black ms-3 mt-3 mb-2 ps-3 pe-3 pt-1'>
                     {{e.date}}
                 </div>
                 <div class="ms-5 float-start">
                     <h3 class="">{{ e.title }}</h3>
                 </div>
-                <!-- <h5 class='float-start'>{{e.title}}</h5> -->
             </div>
-            <div class='Profile-footer mt-2' (click)="setForEdit(e._id)">
+            <div class='Profile-footer mt-2' (click)="setForEdit(e._id)" data-bs-toggle="modal" data-bs-target="#editEvent">
                 <button class="btn btn-primary btn-local mb-3">
                     Edit
                 </button>
             </div>
-            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Launch demo modal
-            </button> -->
         </div>
-        <div class="card add pt-5 pb-2 font-white col-md-4 m-2 mb-sm-0" (click)="add()">
+        <div class="card add pt-5 pb-2 font-white col-md-4 m-2 mb-sm-0" data-bs-toggle="modal"
+            data-bs-target="#addEvent">
             <lucide-icon name="plus" size="200" class="mt-3"></lucide-icon>
         </div>
     </div>
@@ -29,19 +28,19 @@
 
 
 
-<!-- Modal -->
-<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- add-event Modal -->
+<div class="modal fade" id="addEvent" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg ">
         <div class="modal-content bg-black font-white">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Add Event</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="row">
                     <lucide-icon name="arrow-left-circle"></lucide-icon>
                 </div>
-                <form class="row g-3">
+                <form class="row g-3" [formGroup]="addEventForm" (ngSubmit)="addSave()">
                     <div class="col-md-6">
                         <label for="inputEmail4" class="form-label">Title</label>
                         <input type="text" class="form-control" id="inputEmail4" formControlName="title">
@@ -76,7 +75,60 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" >Save changes</button>
         </div>
     </div>
-</div> -->
+</div>
+
+<!-- edit-event Modal -->
+<!-- <div class="modal fade" id="editEvent" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg ">
+        <div class="modal-content bg-black font-white">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Event</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <lucide-icon name="arrow-left-circle"></lucide-icon>
+                </div>
+                <form class="row g-3" [formGroup]="editEventForm" (ngSubmit)="editSave()">
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="inputEmail4" formControlName="title">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Type of event </label>
+                        <input type="text" class="form-control" id="inputPassword4" formControlName="typeOfEvent">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress" class="form-label">Description</label>
+                        <textarea type="text" class="form-control" id="inputAddress" placeholder=""
+                            formControlName="description"></textarea>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="inputCity" class="form-label">Image URL </label>
+                        <input type="text" class="form-control" id="inputCity" formControlName="imageURL">
+                    </div>
+                    <div class="col-6">
+                        <label for="inputAddress2" class="form-label">Max-Team size</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder=""
+                            formControlName="maxMembers">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputCity" class="form-label">Date </label>
+                        <input type="date" class="form-control" id="inputCity" formControlName="date">
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Edit event</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>
+
+
+ -->
