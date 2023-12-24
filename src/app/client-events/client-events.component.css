@@ -38,3 +38,11 @@
 .modal-footer {
   border: none !important;
 }
+
+.arrow{
+  vertical-align: middle;
+}
+
+.title{
+  align-content: center;
+}
